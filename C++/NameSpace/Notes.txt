@@ -1,0 +1,4 @@
+#include <iostreram> --> includes header file(iostreram.h) for input(cin) and output(cout). This enhance out program capabilities
+using namespace std  --> defining that we are using standerd key words i.e cin,out etc .
+                         Means that are not userdefined functions,
+                         we can also defind our own namespace like in this example
