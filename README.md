@@ -1,8 +1,9 @@
 # Programing Stream
-This covers the basics following programming languages 
-C
-C++
-Python
-Bash
-Verilog
-System Verilog
+`This is a repository for my programing stream on twitch`
+## Languages
+-  C 
+-  [C++](C++)
+-  Python
+-  Bash
+-  Verilog
+-  System Verilog
