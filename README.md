@@ -1,5 +1,5 @@
 # Programing Stream
-`This is a repository for my programing stream on twitch`
+`This repository is for learning and Practicing my Programming languages`
 ## Languages
 -  C 
 -  [C++](C++)
