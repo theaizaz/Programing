@@ -227,9 +227,39 @@ That class which are only ment for Derived Class,we can not use to make objects 
 It has at lest one pure virtual functions(or do-nothing functions)
 #### For example:
 ```cpp
-virtual void display()=0;
+    virtual void display()=0;
 ```
 
 This display function will required to define in derived class, otherwise it will through error
 
 ## Polymorphism: 
+
+## Templates
+Templates are used to create a generic function or class. The idea is to pass data type as a parameter so that we don’t need to write the same code for different data types.
+
+##### Syntex
+
+```cpp
+    template <class T>
+```
+#### Template with multiple Parameters
+If we want to handle multiple Parameters use below 
+##### syntex
+```cpp
+    template <class T1, class T2>
+
+    // Passing parameters
+
+    myClass<char,float> obj('C',1.8);
+```
+#### Template with default Parameters
+When no Paramters are passed to template default will execute
+
+##### Syntex
+```cpp
+        template <class T1=int , class T2=char, class T3=float>
+        
+        // Passing Parameters
+
+        myClass<> obj(5, 'A' , 7.8 );
+```
