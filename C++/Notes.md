@@ -1,3 +1,16 @@
+# FILEPATH: /path/to/file.py
+
+def calculate_sum(numbers):
+    """
+    Calculates the sum of a list of numbers.
+
+    Args:
+        numbers (list): A list of numbers.
+
+    Returns:
+        float: The sum of the numbers in the list.
+    """
+    return sum(numbers)
 # Basic Notes for Learning C++
 This is a basic notes for learning C++.
 ## 1. Basic Syntax
@@ -226,6 +239,7 @@ That class which are only ment for Derived Class,we can not use to make objects 
 
 It has at lest one pure virtual functions(or do-nothing functions)
 #### For example:
+
 ```cpp
     virtual void display()=0;
 ```
@@ -235,6 +249,7 @@ This display function will required to define in derived class, otherwise it wil
 ## Polymorphism: 
 
 ## Templates
+
 Templates are used to create a generic function or class. The idea is to pass data type as a parameter so that we don’t need to write the same code for different data types.
 
 ##### Syntex
@@ -242,9 +257,13 @@ Templates are used to create a generic function or class. The idea is to pass da
 ```cpp
     template <class T>
 ```
+
 #### Template with multiple Parameters
+
 If we want to handle multiple Parameters use below 
+
 ##### syntex
+
 ```cpp
     template <class T1, class T2>
 
@@ -252,10 +271,13 @@ If we want to handle multiple Parameters use below
 
     myClass<char,float> obj('C',1.8);
 ```
+
 #### Template with default Parameters
+
 When no Paramters are passed to template default will execute
 
 ##### Syntex
+
 ```cpp
         template <class T1=int , class T2=char, class T3=float>
         
@@ -263,3 +285,30 @@ When no Paramters are passed to template default will execute
 
         myClass<> obj(5, 'A' , 7.8 );
 ```
+
+# STL (Standard Template Library)
+
+STL is a library of container classes, algorithms, and iterators. It is a generalized library and so, its components are parameterized. A working knowledge of template classes is a prerequisite for working with STL.
+
+## Containers
+
+Containers or container classes store objects and data. There are in total seven standard "first-class" container classes and three container adaptor classes and only seven header files that provide access to these containers or container adaptors.
+
+### Types of Containers
+
+1. **Sequence Containers:** implement data structures which can be accessed in a sequential manner. (linear Fashion).
+ `eg: vector, list, deque, arrays.`
+2. **Associative Containers:**(Direct Access, Fast Assess) implement sorted data structures that can be quickly searched (O(log n) complexity).
+`eg: set, multiset, map, multimap.`
+3. **Unordered Associative Containers:** (Derived Containers) implement unordered data structures that can be quickly searched
+`eg: Queue, Stack, Priiority Queue, unordered_set, unordered_multiset, unordered_map, unordered_multimap.`
+
+
+
+## Algorithms
+
+Algorithms act on containers. They provide the means by which you will perform initialization, sorting, searching, and transforming of the contents of containers.
+
+## Iterators
+
+Iterators are used to step through the elements of collections of objects. These collections may be containers or subsets of containers.
