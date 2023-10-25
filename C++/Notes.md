@@ -12,9 +12,13 @@ def calculate_sum(numbers):
     """
     return sum(numbers)
 # Basic Notes for Learning C++
+
 This is a basic notes for learning C++.
+
 ## 1. Basic Syntax
+
 ## Scope Resulution Operater (::)
+
 1. It is used to define a function outside a class.
 2. It is used to access a global variable when there is a local variable with same name.
 3. It is used to access a class's static variable.
@@ -38,6 +42,7 @@ int main() {
 ```
 
 ## Type caste
+
 converte one data type into another
 ### For example:
 ```cpp
@@ -275,15 +280,13 @@ If we want to handle multiple Parameters use below
 #### Template with default Parameters
 
 When no Paramters are passed to template default will execute
-
 ##### Syntex
-
 ```cpp
         template <class T1=int , class T2=char, class T3=float>
         
         // Passing Parameters
 
-        myClass<> obj(5, 'A' , 7.8 );
+        myClass<> obj(5, 'A' , 7.8 );      
 ```
 
 # STL (Standard Template Library)
@@ -302,8 +305,6 @@ Containers or container classes store objects and data. There are in total seven
 `eg: set, multiset, map, multimap.`
 3. **Unordered Associative Containers:** (Derived Containers) implement unordered data structures that can be quickly searched
 `eg: Queue, Stack, Priiority Queue, unordered_set, unordered_multiset, unordered_map, unordered_multimap.`
-
-
 
 ## Algorithms
 
