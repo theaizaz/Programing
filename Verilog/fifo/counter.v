@@ -4,14 +4,11 @@ module counter(
 	input			decrement,
 	input			reset,
 	
-	output reg	[4:0]	count
+	output reg	[1:0]	count
 );
 // Nets
 wire			enable;
-wire	[4:0]	mux_out;
-
-// Regs
-
+wire	[1:0]	mux_out;
 
 // OR GATE
 assign enable = increment | decrement; 
@@ -23,7 +20,7 @@ assign  mux_out = increment ? count +1 : count -1 ;
 // Register
 always @(posedge clk)
 begin
-	count <= #1 (reset ? 5'b0 : (enable ? mux_out : count));
+	count <= (reset ? 2'd3 : (enable ? mux_out : count));
 end
 
 endmodule
