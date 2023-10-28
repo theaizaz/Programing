@@ -5,5 +5,5 @@
 -  [C++](C++)
 -  Python
 -  Bash
--  Verilog
+-  [Verilog](Verilog)
 -  System Verilog
