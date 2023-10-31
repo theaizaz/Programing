@@ -1,5 +1,5 @@
 module moor #(
-    parameter IDIL    = 3'b000,
+    parameterIDLE    = 3'b000,
     parameter start_a = 3'b001,
     parameter wait_a  = 3'b010,
     parameter start_b = 3'b011,
@@ -23,13 +23,13 @@ module moor #(
   reg [3:0] state_next;
 
   always @(posedge clk) begin
-    state <= #1 (reset ? IDIL : state_next);
+    state <= #1 (reset ? IDLE : state_next);
   end
 
   always @(*) begin
     Done = 0;
     case (state)
-      IDIL: begin
+     IDLE: begin
         state_next = (start ? start_a : state);
       end
 
@@ -52,7 +52,7 @@ module moor #(
       end
 
       done: begin
-        state_next = IDIL;
+        state_next =IDLE;
         Done = 1;
       end
       default: state_next = state;
