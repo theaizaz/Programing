@@ -9,4 +9,4 @@
 - Python
 - Bash
 - [Verilog](Verilog)
-- [SystemVerilog](System Verilog)
+- [System Verilog](System_Verilog)
