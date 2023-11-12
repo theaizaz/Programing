@@ -18,7 +18,7 @@ public:
     //Copy constructor for deep copy
     dynamicArray(const dynamicArray &obj) : size(obj.size), ptr(new double[obj.size])
     {
-        // cout<<"Copy constructor for deep copy\n";
+         cout<<"Copy constructor for deep copy\n";
         // this is use when we use 
         //     darr2(darr) -> passing object as argument
 
@@ -110,9 +110,9 @@ int main()
     dynamicArray darr2(6);
 
     darr2 = darr; // Deep copy using assignment operator
-    darr2.setData(3, 10);
-    darr2.setData(4, 20);
-    darr2.setData(5, 30);
+    //darr2.setData(3, 10);
+    //darr2.setData(4, 20);
+    //darr2.setData(5, 30);
 
     darr.printData();
 

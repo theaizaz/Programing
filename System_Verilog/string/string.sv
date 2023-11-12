@@ -6,9 +6,12 @@ module test ();
 
   end
 
-  string name = "Aizaz";
+	string fname = "Aizaz";
+  	string lname = "khan";
   
   initial begin
-    $display(name);
+    
+    $display("Hello %s ",fname);
+    
   end
 endmodule
