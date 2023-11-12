@@ -15,6 +15,8 @@ int main(){
         cout<<v[i]<<" ";
     }
     cout<<"\n";
+   
+    cout<<"v.end() - 8 = "<<*(v.begin() + 8)<<endl;
     vector<double> :: iterator itr = v.begin();
     for (int i = 0; i < int(v.size()); i++)
     {
