@@ -1,0 +1,4 @@
+C++
+	Q1: How to check if user has entered integer, character or string ?
+	Q2: In l-value and r-value which one will execute first?
+		A: l-value.
