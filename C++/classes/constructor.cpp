@@ -1,6 +1,6 @@
 /*
     Constuctor:
-        1) They can not return any value (no return type void)
+        1) They can not return any value (no return type "void")
         2) We cannot refer to their address
         3) Same name as class name
         4) Invoked automaticaly

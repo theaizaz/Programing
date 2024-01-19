@@ -47,7 +47,7 @@ int main()
 
     n1.setData(1, 5);
     n2.setData(2, 6);
-
+    
     sumComplex = result.sumComplex(n1, n2);
     sumComplex.Display();
 

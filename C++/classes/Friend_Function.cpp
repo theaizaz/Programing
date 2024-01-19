@@ -4,6 +4,7 @@
     3) It can be invoked without the help of object
     4) Usualy contains the objects as arguments
     5) can be decleared in public and private section of the class (declaration)
+    6) To access class private data.
 */
 
 #include <iostream>
