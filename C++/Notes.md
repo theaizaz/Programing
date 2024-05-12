@@ -280,6 +280,7 @@ If we want to handle multiple Parameters use below
 #### Template with default Parameters
 
 When no Paramters are passed to template default will execute
+
 ##### Syntex
 ```cpp
         template <class T1=int , class T2=char, class T3=float>
@@ -313,3 +314,39 @@ Algorithms act on containers. They provide the means by which you will perform i
 ## Iterators
 
 Iterators are used to step through the elements of collections of objects. These collections may be containers or subsets of containers.
+
+## Exception Handling
+
+Exceptions are runtime anomalies or abnormal conditions that a program encounters during its execution. The process of handling these exceptions is called exception handling.Using the exception handling mechanism, the control from one part of the program where the exception occurred can be transferred to another part of the code.
+
+### Types of C++ Exception
+
+There are two types of exceptions in C++
+
+#### Synchronous:
+
+Exceptions that happen when something goes wrong because of a mistake in the input data or when the program is not equipped to handle the current type of data it’s working with, such as dividing a number by zero.
+
+#### Asynchronous:
+
+Exceptions that are beyond the program’s control, such as disc failure, keyboard interrupts, etc.
+
+### Exception Handling Keywords
+
+**try:** This keyword is used to specify a block where we should place exception code. The try block must be followed by one or more catch blocks.
+
+**catch:** The catch statement represents a block of code that is executed when a particular exception is thrown from the try block. The code to handle the exception is written inside the catch block.
+
+**throw:** An exception in C++ can be thrown using the throw keyword. When a program encounters a throw statement, then it immediately terminates the current function and starts finding a matching catch block to handle the thrown exception.
+
+### Exception Handling Syntax
+
+```cpp
+try {         
+     // Code that might throw an exception
+     throw SomeExceptionType("Error message");
+ } 
+catch( ExceptionName e1 )  {   
+     // catch block catches the exception that is thrown from try block
+ } 
+``` 

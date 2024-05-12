@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-7'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Home Automation with ESP-32</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        #main-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .relay-button,
+        .led-button,
+        .wifi-config-button {
+            background-color: #008CBA;
+            color: white;
+        }
+
+        .button:active {
+            background-color: #005684;
+        }
+
+        #wifi-config {
+            display: none;
+            margin-top: 20px;
+        }
+
+        #wifi-scan-results {
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input,
+        button {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Home Automation with ESP-32</h1>
+        <div id='main-container'> <img src='https://www.asecurelife.com/app/uploads/2019/02/home-automation-720x480.jpg'
+                alt='Home Automation Image'>
+            <div> <button class='button led-button' onclick='toggleDevice("led")'>Toggle LED</button> <button
+                    class='button relay-button' onclick='toggleDevice("relay1")'>Toggle Relay 1</button> <button
+                    class='button relay-button' onclick='toggleDevice("relay2")'>Toggle Relay 2</button> <button
+                    class='button relay-button' onclick='toggleDevice("relay3")'>Toggle Relay 3</button> <button
+                    class='button relay-button' onclick='toggleDevice("relay4")'>Toggle Relay 4</button> <button
+                    class='button wifi-config-button' onclick='toggleWifiConfig()'>WiFi Configuration</button>
+                <div id='wifi-config'> <button class='button' onclick='scanWifi()'>Scan for WiFi Networks</button>
+                    <div id='wifi-scan-results'></div> <label for='ssid'>WiFi SSID:</label> <input type='text' id='ssid'
+                        name='ssid' placeholder='Enter WiFi SSID'> <label for='password'>Password:</label> <input
+                        type='password' id='password' name='password' placeholder='Enter WiFi Password'>
+                </div>
+            </div>
+        </div>
+        <script> function toggleDevice(device) { var xhr = new XMLHttpRequest(); xhr.open('GET', '/' + device, true); xhr.send(); xhr.onreadystatechange = function () { if (xhr.readyState == 4 && xhr.status == 200) { console.log(xhr.responseText); } }; } function toggleWifiConfig() { var wifiConfig = document.getElementById('wifi-config'); wifiConfig.style.display = wifiConfig.style.display === 'none' ? 'block' : 'none'; } function scanWifi() { var scanResults = ['WiFi Network 1', 'WiFi Network 2', 'WiFi Network 3']; var resultsContainer = document.getElementById('wifi-scan-results'); resultsContainer.innerHTML = '<strong>Scan Results:</strong><br>' + scanResults.join('<br>'); } </script>
+    </header>
+</body>
+
+</html>
