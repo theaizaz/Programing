@@ -22,7 +22,7 @@ typedef struct {
     uint8_t model   :2;  // 2 bit
     uint32_t engine :3; // 3 bits
 } car_t;   // Total: 1 byte (no padding).
-#pragma pack()
+// #pragma pack()
 
 /* aligned to a 4-byte boundary, regardless of the natural alignment requirements of its members. */
 // typedef struct __attribute__((aligned(4))) {
