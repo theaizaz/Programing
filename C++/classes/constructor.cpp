@@ -15,7 +15,7 @@ private:
     int a, b;
 
 public:
-    complex(void);     // defult constructor init (should be in public)
+    complex(void);     // defult constructor initMotorDriver *m (should be in public)
     complex(int, int); // Parameterized constructor init (constructor overloading)
     complex(int);      // also constructor overloading
     complex(complex &obj); // Copying constructor (passing address of object)
